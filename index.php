@@ -2,7 +2,13 @@
     $text = "La paura è la via per il lato oscuro. La paura conduce all'ira, l'ira all'odio e l'odio alla sofferenza";
     $author = 'Yoda';
     $length = strlen($text);
-    $bad_word = $_GET['word'];
+    // Aggiunge controllo se la pariabile word è dichiarata
+    if(isset($_GET['word'])){
+        $bad_word = $_GET['word'];
+    } else {
+        $bad_word = '';
+    }
+    
     $text_censured = str_replace($bad_word, '***', $text);
     $length_censured = strlen($text_censured);
 ?>

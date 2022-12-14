@@ -2,7 +2,8 @@
     $text = "La paura è la via per il lato oscuro. La paura conduce all'ira, l'ira all'odio e l'odio alla sofferenza";
     $author = 'Yoda';
     $length = strlen($text);
-    // Aggiunge controllo se la pariabile word è dichiarata
+    
+    // Aggiunge controllo se la variabile word è dichiarata
     if(isset($_GET['word'])){
         $bad_word = $_GET['word'];
     } else {
@@ -23,11 +24,11 @@
 <body>
     <h1>AFORISMI</h1>
     <p><?php echo $text ?></p>
-    <h3>Autore: <?php echo $author ?></h3>
-    <span>Lunghezza testo: <strong><?php echo $length ?></strong></span>
+    <h3>Autore: <?php echo $author; ?></h3>
+    <span>Lunghezza testo: <strong><?php echo $length; ?></strong></span>
     <h2>Testo con censura</h2>
-    <p><?php echo $text_censured ?></p>
-    <h3>Autore: <?php echo $author ?></h3>
-    <span>Lunghezza testo: <strong><?php echo $length_censured ?></strong></span>
+    <p><?php echo $text_censured; ?></p>
+    <h3>Autore: <?php echo $author; ?></h3>
+    <span>Lunghezza testo: <strong><?php echo $length_censured; ?></strong></span>
 </body>
 </html>
